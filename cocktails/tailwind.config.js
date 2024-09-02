@@ -1,11 +1,14 @@
 /** @type {import('tailwindcss').Config} */
+const withMT = require("@material-tailwind/react/utils/withMT");
+
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
       fontFamily: {
-        'abril-fatface': ['Abril Fatface', 'serif'],
-        'baskervville-sc': ['Baskervville SC', 'serif'],
+        "abril-fatface": ["Abril Fatface", "serif"],
+        "baskervville-sc": ["Baskervville SC", "serif"],
+        Oswald: ["Oswald"],
       },
     },
   },

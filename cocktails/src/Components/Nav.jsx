@@ -5,6 +5,11 @@ import { GoPerson } from "react-icons/go";
 import { PiShoppingCartSimpleLight } from "react-icons/pi";
 import { IoSearchOutline } from "react-icons/io5";
 import { TiSpiral } from "react-icons/ti";
+import { IoIosClose } from "react-icons/io";
+import { FaFacebookSquare } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
+import { IoLogoGithub } from "react-icons/io5";
+import { FaLinkedin } from "react-icons/fa6";
 
 const Nav = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -26,7 +31,10 @@ const Nav = () => {
       </div>
       <div className="flex justify-between items-center lg:px-10 px-2 py-2 top-0 sticky">
         <div className="flex gap-3">
-          <CiMenuBurger className="size-8 cursor-pointer" onClick={toggleSidebar} />
+          <CiMenuBurger
+            className="size-8 cursor-pointer"
+            onClick={toggleSidebar}
+          />
           <IoSearchOutline className="size-8" />
         </div>
 
@@ -66,19 +74,38 @@ const Nav = () => {
 
       {/* Sidebar */}
       <div
-        className={`fixed top-0 left-0 h-full w-64 bg-gray-800 text-white transition-transform transform ${
+        className={`fixed top-8 left-0 h-full w-[370px] lg:w-[650px] bg-black p-5  text-stone-300 transition-transform transform ${
           isSidebarOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
-        <div className="flex justify-end p-4">
-          <button onClick={toggleSidebar}>X</button>
+        <div className="flex">
+          <button onClick={toggleSidebar}>
+            <IoIosClose className="size-12 mb-10" />
+          </button>
         </div>
-        <ul className="p-4">
-          <li className="py-2">Home</li>
-          <li className="py-2">Shop</li>
-          <li className="py-2">About</li>
-          <li className="py-2">Contact</li>
+        <ul className="lg:p-4 font-Oswald text-2xl grid gap-y-3">
+          <li className="py-2 cursor-pointer">SHOP ALL</li>
+          <li className="py-2 cursor-pointer">FAQ</li>
+          <li className="py-2 cursor-pointer">CONTACT</li>
         </ul>
+        <div className="p-0 my-4 lg:my-0 lg:p-5 grid gap-y-2 font-Oswald text-xl">
+          <p className="cursor-pointer">Log In</p>
+          <p className="cursor-pointer">Create account</p>
+        </div>
+        <div className="p-0 lg:px-5">
+          <input
+            type="text"
+            placeholder="Search"
+            className="bg-black w-[300px] mt-5 lg:mt-0 lg:w-[400px] h-12 border rounded-lg p-2 border-stone-300 placeholder:text-stone-300"
+          />
+          <div className="flex gap-4 lg:gap-7 mt-5">
+          <FaFacebookSquare className="size-5 lg:size-6 cursor-pointer"/>
+          <FaInstagram className="size-5 lg:size-6 cursor-pointer"/>
+          <IoLogoGithub className="size-5 lg:size-6 cursor-pointer"/>
+          <FaLinkedin className="size-5 lg:size-6 cursor-pointer"/>
+        </div>
+        </div>
+        
       </div>
     </div>
   );
