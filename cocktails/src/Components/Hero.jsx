@@ -1,16 +1,28 @@
 import React from "react";
 import SunsetPritz from "../assets/SunsetPritzW.jpg";
+
 const Hero = () => {
   return (
-    <div>
-      <div className="absolute">
-        <img src={SunsetPritz} alt="/" className="" />
+    <div className="relative h-screen w-full flex justify-center overflow-hidden">
+      {/* Background Image */}
+      <div className="absolute inset-0">
+        <img
+          src={SunsetPritz}
+          alt="Sunset Spritz"
+          className="object-cover w-full h-full"
+        />
       </div>
-      <div className="relative text-center justify-center pt-5 mx-[400px] grid gap-y-7 text-stone-200 font-Oswald">
-        <p className="text-7xl font-semibold">NEW! THC SUNSET SPRITZ</p>
-        <p className="text-2xl font-medium">ZERO PROOF COCKTAIL</p>
-        <div className="flex justify-center items-center">
-          <button className="bg-[#cd9e53] text-black w-32 h-12 font-Oswald rounded-md text-center">
+
+      {/* Text Content */}
+      <div className="relative text-center text-stone-200 font-Oswald z-10 p-5">
+        <p className="text-4xl md:text-6xl lg:text-7xl font-semibold ">
+          NEW! THC SUNSET SPRITZ
+        </p>
+        <p className="text-xl md:text-2xl lg:text-3xl font-medium mt-4 ">
+          ZERO PROOF COCKTAIL
+        </p>
+        <div className="flex justify-center items-center mt-6">
+          <button className="bg-[#cd9e53] text-black w-40 h-12 rounded-md text-center hover:bg-[#e0af70] transition duration-300">
             SHOP NOW
           </button>
         </div>

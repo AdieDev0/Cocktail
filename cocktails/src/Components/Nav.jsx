@@ -105,7 +105,6 @@ const Nav = () => {
           <FaLinkedin className="size-5 lg:size-6 cursor-pointer"/>
         </div>
         </div>
-        
       </div>
     </div>
   );
