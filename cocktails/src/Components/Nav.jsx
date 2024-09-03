@@ -18,7 +18,7 @@ const Nav = () => {
     setIsSidebarOpen(!isSidebarOpen);
   };
 
-  const [shopOpen, setshopOpen] = useState(false);
+  const [shopOpen, setshopOpen] = useState(true);
 
   const bumukaska = () => {
     setshopOpen(!shopOpen);
