@@ -6,7 +6,8 @@ import Zero from './Components/Zero'
 import Rolling from './Components/Rolling'
 import Awards from './Components/Awards'
 import Foot from './Components/Foot'
-import Deep from './Components/deep'
+import Deeps from './Components/Deeps'
+
 const App = () => {
   return (
     <div>
@@ -17,7 +18,7 @@ const App = () => {
       <Rolling/>
       <Awards/>
       <Foot/>
-      <Deep/>
+      <Deeps/>
     </div>
   )
 }

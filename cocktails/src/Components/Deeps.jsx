@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react'
 
-const Deep = () => {
+const Deeps = () => {
   return (
     <div className="bg-black p-10 flex justify-between h-32">
       <p className="font-Oswald text-stone-200">2024, CLONE!! BY ADIE</p>
@@ -20,7 +20,7 @@ const Deep = () => {
         <img src="https://www.landbank.com/images/icons/bancnet.png" alt="/"  className="w-16 lg:inline-block hidden"/>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Deep;
+export default Deeps
