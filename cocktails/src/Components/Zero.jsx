@@ -1,5 +1,5 @@
 import React from "react";
-import close from "../assets/close.jpg";
+import close from "../assets/Close.jpg";
 import iced from "../assets/IcedCan.png";
 import OLDF from "../assets/OLDF.png";
 import Oldf from "../assets/OldFashion.jpg";
