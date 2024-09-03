@@ -20,6 +20,7 @@ const Nav = () => {
 
   return (
     <div className="bg-black w-full">
+      {/* Moving */}
       <div>
         <Marquee pauseOnHover autoFill>
           <TiSpiral className="size-4 mx-2 animate-spin text-center" />{" "}
@@ -29,7 +30,7 @@ const Nav = () => {
         </Marquee>
         {/* main nav */}
       </div>
-      <div className="flex justify-between items-center lg:px-10 px-2 py-2 top-0 sticky">
+      <div className="flex justify-between items-center lg:px-10 px-2 py-2">
         <div className="flex gap-3">
           <CiMenuBurger
             className="size-8 cursor-pointer"
