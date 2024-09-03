@@ -11,7 +11,7 @@ import award8 from "../assets/award8.png";
 import Fly from "../assets/Fly.png";
 const Awards = () => {
   return (
-    <div className="bg-black py-0 lg:pt-32 h-auto">
+    <div className="bg-black pt-64 lg:pt-32 h-auto">
       <div>
         <Marquee pauseOnHover autoFill speed={20}>
           <img src={award1} alt="" className="w-[150px] lg:w-[270px] mx-5" />

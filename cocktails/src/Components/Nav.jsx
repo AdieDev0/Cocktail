@@ -31,28 +31,30 @@ const Nav = () => {
         {/* main nav */}
       </div>
       <div className="flex justify-between items-center lg:px-10 px-2 py-2">
-        <div className="flex gap-3">
+        <div className="flex gap-5 text-stone-200">
           <CiMenuBurger
-            className="size-8 cursor-pointer"
+            className="size-5 lg:size-8 cursor-pointer"
             onClick={toggleSidebar}
           />
-          <IoSearchOutline className="size-8" />
+          <IoSearchOutline className="size-5 lg:size-8" />
         </div>
 
         <div className="text-center">
-          <p className="font-abril-fatface text-7xl text-yellow-700">Flyers</p>
+          <p className="font-abril-fatface text-6xl lg:text-7xl text-yellow-700">
+            Flyers
+          </p>
           <p className="font-baskervville-sc uppercase text-xs font-semibold mt-2">
             Cocktail Company
           </p>
         </div>
-        <div className="flex gap-3 text-slate-200">
+        <div className="flex gap-5 text-slate-200">
           <label className="swap swap-rotate">
             {/* this hidden checkbox controls the state */}
             <input type="checkbox" />
 
             {/* sun icon */}
             <svg
-              className="swap-on size-8 fill-current"
+              className="swap-on size-5 lg:size-8 fill-current"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
             >
@@ -61,7 +63,7 @@ const Nav = () => {
 
             {/* moon icon */}
             <svg
-              className="swap-off size-8 fill-current"
+              className="swap-off size-5 lg:size-8 fill-current"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
             >
@@ -69,13 +71,13 @@ const Nav = () => {
             </svg>
           </label>
           <GoPerson className="size-8 hidden lg:block" />
-          <PiShoppingCartSimpleLight className="size-8" />
+          <PiShoppingCartSimpleLight className="size-5 lg:size-8" />
         </div>
       </div>
 
       {/* Sidebar */}
       <div
-        className={`fixed top-8 left-0 h-full w-[370px] lg:w-[650px] bg-black p-5  text-stone-300 transition-transform transform ${
+        className={`fixed top-0 left-0 h-full w-[370px] lg:w-[650px] bg-black p-5 text-stone-300 transition-transform transform z-50 ${
           isSidebarOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
@@ -100,11 +102,11 @@ const Nav = () => {
             className="bg-black w-[300px] mt-5 lg:mt-0 lg:w-[400px] h-12 border rounded-lg p-2 border-stone-300 placeholder:text-stone-300"
           />
           <div className="flex gap-4 lg:gap-7 mt-5">
-          <FaFacebookSquare className="size-5 lg:size-6 cursor-pointer"/>
-          <FaInstagram className="size-5 lg:size-6 cursor-pointer"/>
-          <IoLogoGithub className="size-5 lg:size-6 cursor-pointer"/>
-          <FaLinkedin className="size-5 lg:size-6 cursor-pointer"/>
-        </div>
+            <FaFacebookSquare className="size-5 lg:size-6 cursor-pointer" />
+            <FaInstagram className="size-5 lg:size-6 cursor-pointer" />
+            <IoLogoGithub className="size-5 lg:size-6 cursor-pointer" />
+            <FaLinkedin className="size-5 lg:size-6 cursor-pointer" />
+          </div>
         </div>
       </div>
     </div>

@@ -46,7 +46,7 @@ const Foot = () => {
           <input
             type="/"
             placeholder="email@example.com"
-            className="placeholder-stone-200 font-Oswald border border-stone-200 h-12 lg:w-80 w-full rounded-lg p-2 lg:mr-2 mr-0 bg-black"
+            className="placeholder-stone-200/40 font-Oswald border border-stone-200 h-12 lg:w-80 w-full rounded-lg p-2 lg:mr-2 mr-0 bg-black"
           />
           <button className="bg-[#cd9e53] lg:mt-10  mt-4 text-black w-full lg:w-32 h-12 rounded-md text-center hover:bg-[#e0af70] transition duration-300 font-Oswald mb-10 lg:mb-0">
             SUBSCRIBE
@@ -58,10 +58,20 @@ const Foot = () => {
           Cloned By @_adie.00
         </p>
         <div className="flex gap-3 ">
-          <IoLogoGithub className="lg:size-6 size-5 cursor-pointer hover:text-gray-400 duration-200" />
+          <a href="https://github.com/AdieDev0">
+            <IoLogoGithub className="lg:size-6 size-5 cursor-pointer hover:text-gray-400 duration-200" />
+          </a>
+          <a href="https://www.linkedin.com/in/adrian-barrios-3946b7285/">
           <FaLinkedin className="lg:size-6 size-5 cursor-pointer hover:text-blue-400 duration-200" />
+          </a>
+
+          <a href="https://www.instagram.com/_adie.00/">
           <FaInstagram className="lg:size-6 size-5 cursor-pointer hover:text-orange-500 duration-200" />
-          <FaSquareFacebook className="lg:size-6 size-5 cursor-pointer hover:text-blue-500 duration-200" />
+
+          </a>
+          <a href="https://www.facebook.com/adrey.barrios">
+            <FaSquareFacebook className="lg:size-6 size-5 cursor-pointer hover:text-blue-500 duration-200" />
+          </a>
         </div>
       </div>
     </div>
