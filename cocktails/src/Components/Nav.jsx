@@ -18,6 +18,12 @@ const Nav = () => {
     setIsSidebarOpen(!isSidebarOpen);
   };
 
+  const [shopOpen, setshopOpen] = useState(false);
+
+  const bumukaska = () => {
+    setshopOpen(!shopOpen);
+  };
+
   return (
     <div className="bg-black w-full">
       {/* Moving */}
@@ -71,7 +77,10 @@ const Nav = () => {
             </svg>
           </label>
           <GoPerson className="size-8 hidden lg:block" />
-          <PiShoppingCartSimpleLight className="size-5 lg:size-8" />
+          <PiShoppingCartSimpleLight
+            onClick={bumukaska}
+            className="size-5 lg:size-8 cursor-pointer"
+          />
         </div>
       </div>
 
@@ -107,6 +116,23 @@ const Nav = () => {
             <IoLogoGithub className="size-5 lg:size-6 cursor-pointer" />
             <FaLinkedin className="size-5 lg:size-6 cursor-pointer" />
           </div>
+        </div>
+      </div>
+
+      {/* shopping */}
+      <div
+        className={`fixed top-0 right-0 h-full w-[370px] lg:w-[650px] bg-black p-5 text-stone-300 transition-transform transform z-50 ${
+          shopOpen ? "translate-x-full" : "-translate-x-0"
+        }`}
+      >
+        <div className="flex items-center justify-between">
+          <p className="text-2xl font-semibold font-Oswald">YOUR CART</p>
+          <button onClick={bumukaska}>
+            <IoIosClose className="size-12" />
+          </button>
+        </div>
+        <div className="mt-10">
+        <p className="text-center text-xl font-Oswald">Your cart is currently empty.</p>
         </div>
       </div>
     </div>
