@@ -39,7 +39,7 @@ const Nav = () => {
       <div className="flex justify-between items-center lg:px-10 px-2 py-2">
         <div className="flex gap-5 text-stone-200">
           <CiMenuBurger
-            className="size-5 lg:size-8 cursor-pointer"
+            className="size-6 lg:size-8 cursor-pointer"
             onClick={toggleSidebar}
           />
           <IoSearchOutline className="size-5 lg:size-8" />
@@ -60,7 +60,7 @@ const Nav = () => {
 
             {/* sun icon */}
             <svg
-              className="swap-on size-5 lg:size-8 fill-current"
+              className="swap-on size-6 lg:size-8 fill-current"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
             >
@@ -69,7 +69,7 @@ const Nav = () => {
 
             {/* moon icon */}
             <svg
-              className="swap-off size-5 lg:size-8 fill-current"
+              className="swap-off size-6 lg:size-8 fill-current"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
             >
@@ -79,7 +79,7 @@ const Nav = () => {
           <GoPerson className="size-8 hidden lg:block" />
           <PiShoppingCartSimpleLight
             onClick={bumukaska}
-            className="size-5 lg:size-8 cursor-pointer"
+            className="size-6 lg:size-8 cursor-pointer"
           />
         </div>
       </div>
@@ -121,20 +121,23 @@ const Nav = () => {
 
       {/* shopping */}
       <div
-        className={`fixed top-0 right-0 h-full w-[370px] lg:w-[650px] bg-black p-5 text-stone-300 transition-transform transform z-50 ${
-          shopOpen ? "translate-x-full" : "-translate-x-0"
-        }`}
-      >
-        <div className="flex items-center justify-between">
-          <p className="text-2xl font-semibold font-Oswald">YOUR CART</p>
-          <button onClick={bumukaska}>
-            <IoIosClose className="size-12" />
-          </button>
-        </div>
-        <div className="mt-10">
-        <p className="text-center text-xl font-Oswald">Your cart is currently empty.</p>
-        </div>
-      </div>
+  className={`fixed top-0 right-0 h-full w-[370px] lg:w-[650px] bg-black p-5 text-stone-300 transition-transform transform z-50 ${
+    shopOpen ? "translate-x-0" : "translate-x-full"
+  }`}
+>
+  <div className="flex items-center justify-between">
+    <p className="text-2xl font-semibold font-Oswald">YOUR CART</p>
+    <button onClick={bumukaska}>
+      <IoIosClose className="text-2xl" />
+    </button>
+  </div>
+  <div className="mt-10">
+    <p className="text-center text-xl font-Oswald">
+      Your cart is currently empty.
+    </p>
+  </div>
+</div>
+
     </div>
   );
 };
