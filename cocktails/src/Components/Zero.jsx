@@ -12,7 +12,7 @@ import Water from "../assets/WaterMint.png";
 import MangoG from "../assets/MangoGuava.png";
 import Gmango from "../assets/GuavaMango.png";
 import Glime from "../assets/GrapefruitLime.png";
-import Fgrape from "../assets/FruitGRape.png";
+import Fgrape from "../assets/FruitGrape.png";
 import Sunset from "../assets/SunsetPritzBeach.png";
 import Cans from "../assets/Cans.png";
 
