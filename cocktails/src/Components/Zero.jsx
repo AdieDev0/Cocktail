@@ -1,4 +1,6 @@
 import React from "react";
+
+// Assets
 import close from "../assets/Close.jpg";
 import iced from "../assets/IcedCan.png";
 import OLDF from "../assets/OLDF.png";
@@ -16,174 +18,83 @@ import Fgrape from "../assets/FruitGrape.png";
 import Sunset from "../assets/SunsetPritzBeach.png";
 import Cans from "../assets/Cans.png";
 
+// Main data
+const products = [
+  {
+    frontImg: close,
+    hoverImg: iced,
+    name: "THC Apéro Spritz",
+    price: "$35.00+",
+  },
+  {
+    frontImg: Oldf,
+    hoverImg: OLDF,
+    name: "THC Ol' Fashioned",
+    price: "$35.00+",
+  },
+  { frontImg: marga, hoverImg: MARGA, name: "THC Margarita", price: "$35.00+" },
+  { frontImg: NewC, hoverImg: Cans2, name: "THC PARTY PACK", price: "$95.00+" },
+  {
+    frontImg: water,
+    hoverImg: Water,
+    name: "THC Sunset Spritz - Watermelon Mint",
+    price: "$35.00+",
+  },
+  {
+    frontImg: MangoG,
+    hoverImg: Gmango,
+    name: "THC Sunset Spritz - Mango Guava",
+    price: "$35.00+",
+  },
+  {
+    frontImg: Glime,
+    hoverImg: Fgrape,
+    name: "THC Sunset Spritz - Grapefruit Lime",
+    price: "$35.00+",
+  },
+  {
+    frontImg: Sunset,
+    hoverImg: Cans,
+    name: "THC SUNSET SPRITZ - PARTY PACK",
+    price: "$95.00+",
+  },
+];
+
+// Reusable product card
+const ProductCard = ({ frontImg, hoverImg, name, price }) => (
+  <div className="relative text-center h-[320px] lg:h-[480px] border-yellow-700 border rounded-xl p-2 lg:p-5 grid gap-y-4 w-fit">
+    <div className="relative">
+      <img
+        src={frontImg}
+        alt={name}
+        className="rounded-xl lg:w-[280px] lg:h-[350px] object-cover transition-opacity duration-300 ease-in-out"
+      />
+      <div className="absolute top-0 left-0 w-full h-full bg-black rounded-xl opacity-0 transition-opacity duration-300 ease-in-out hover:opacity-100 flex items-center justify-center">
+        <img src={hoverImg} alt={name} className="rounded-xl w-[280px]" />
+      </div>
+    </div>
+    <div className="grid gap-y-1">
+      <p className="font-semibold text-stone-200">{name}</p>
+      <p className="font-Oswald text-stone-200">{price}</p>
+    </div>
+  </div>
+);
+
 const Zero = () => {
   return (
-    <div className="w-full lg:p-10 p-5 bg-black">
+    <div className="w-full bg-black p-5 lg:p-20">
       <div className="text-center mb-10 lg:mb-20">
         <p className="lg:text-5xl text-2xl font-medium text-stone-200">
           ZERO-PROOF THC COCKTAILS
         </p>
       </div>
 
-      {/* Cards */}
-
-      <div className="flex flex-col md:flex-row lg:flex-row gap-10 lg:mb-10 mb-0">
-        {/* 1 */}
-        <div className="flex gap-5 lg:gap-10">
-          <div className="relative text-center items-center h-[320px] lg:h-[480px] border-yellow-700 border lg:rounded-xl md:rounded-xl rounded-lg lg:p-5 p-2 w-fit grid gap-y-4">
-            <div className="relative">
-              <img
-                src={close}
-                alt="close"
-                className="rounded-xl lg:w-[280px] lg:h-[350px] transition-opacity duration-300 ease-in-out object-cover"
-              />
-              <div className="absolute top-0 left-0 lg:w-[280px] h-full bg-black rounded-xl opacity-0 transition-opacity duration-300 ease-in-out hover:opacity-100 flex items-center justify-center">
-                <img src={iced} alt="iced" className="rounded-xl w-[280px]" />
-              </div>
-            </div>
-            <div className="grid gap-y-3">
-              <p className="font-semibold text-stone-200">THC Apéro Spritz</p>
-              <p className="font-Oswald text-stone-200">$35.00+ </p>
-            </div>
-          </div>
-          {/* 2 */}
-          <div className="relative text-center items-center h-[320px] lg:h-[480px] border-yellow-700 border lg:rounded-xl md:rounded-xl rounded-lg lg:p-5 p-2 w-fit grid gap-y-4">
-            <div className="relative">
-              <img
-                src={Oldf}
-                alt="close"
-                className="rounded-xl lg:w-[280px] lg:h-[350px]  transition-opacity duration-300 ease-in-out object-cover"
-              />
-              <div className="absolute top-0 left-0 lg:w-[280px] h-full bg-black rounded-xl opacity-0 transition-opacity duration-300 ease-in-out hover:opacity-100 flex items-center justify-center">
-                <img src={OLDF} alt="iced" className="rounded-xl w-[280px]" />
-              </div>
-            </div>
-            <div className="grid gap-y-3">
-              <p className="font-semibold text-stone-200">THC Ol' Fashioned</p>
-              <p className="font-Oswald text-stone-200">$35.00+ </p>
-            </div>
-          </div>
-        </div>
-        {/* 3 */}
-        <div className="flex gap-5 lg:gap-10">
-          <div className="relative text-center items-center h-[320px] lg:h-[480px] border-yellow-700 border lg:rounded-xl md:rounded-xl rounded-lg lg:p-5 p-2 w-fit grid gap-y-4">
-            <div className="relative">
-              <img
-                src={marga}
-                alt="close"
-                className="rounded-xl lg:w-[280px] lg:h-[350px] transition-opacity duration-300 ease-in-out object-cover"
-              />
-              <div className="absolute top-0 left-0 lg:w-[280px] h-full bg-black rounded-xl opacity-0 transition-opacity duration-300 ease-in-out hover:opacity-100 flex items-center justify-center">
-                <img src={MARGA} alt="iced" className="rounded-xl w-[280px]" />
-              </div>
-            </div>
-            <div className="grid gap-y-3">
-              <p className="font-semibold text-stone-200">THC Margarita</p>
-              <p className="font-Oswald text-stone-200">$35.00+ </p>
-            </div>
-          </div>
-          {/* 4 */}
-          <div className="relative text-center items-center h-[320px] lg:h-[480px] border-yellow-700 border lg:rounded-xl md:rounded-xl rounded-lg lg:p-5 p-2 w-fit grid gap-y-4">
-            <div className="relative">
-              <img
-                src={NewC}
-                alt="close"
-                className="rounded-xl lg:w-[280px] lg:h-[350px] transition-opacity duration-300 ease-in-out object-cover"
-              />
-              <div className="absolute top-0 left-0 lg:w-[280px] h-full bg-black rounded-xl opacity-0 transition-opacity duration-300 ease-in-out hover:opacity-100 flex items-center justify-center">
-                <img src={Cans2} alt="iced" className="rounded-xl w-[280px]" />
-              </div>
-            </div>
-            <div className="grid gap-y-3">
-              <p className="font-semibold text-stone-200">THC PARTY PACK</p>
-              <p className="font-Oswald text-stone-200">$95.00+ </p>
-            </div>
-          </div>
-        </div>
+      {/* Responsive Grid */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 justify-items-center">
+        {products.map((item, idx) => (
+          <ProductCard key={idx} {...item} />
+        ))}
       </div>
-      <div className="flex flex-col md:flex-row lg:flex-row gap-10 mt-10">
-        <div className="flex gap-5 lg:gap-10">
-          {/* 5 */}
-          <div className="relative text-center items-center h-[320px] lg:h-[480px] border-yellow-700 border lg:rounded-xl md:rounded-xl rounded-lg lg:p-5 p-2 w-fit grid gap-y-4">
-            <div className="relative">
-              <img
-                src={water}
-                alt="close"
-                className="rounded-xl lg:w-[280px] lg:h-[350px] transition-opacity duration-300 ease-in-out object-cover"
-              />
-              <div className="absolute top-0 left-0 lg:w-[280px] h-full bg-black rounded-xl opacity-0 transition-opacity duration-300 ease-in-out hover:opacity-100 flex items-center justify-center">
-                <img src={Water} alt="iced" className="rounded-xl w-[280px]" />
-              </div>
-            </div>
-            <div className="grid gap-y-3">
-              <p className="font-semibold text-stone-200">
-                THC Sunset Spritz - Watermelon Mint
-              </p>
-              <p className="font-Oswald text-stone-200">$35.00+</p>
-            </div>
-          </div>
-          {/* 6 */}
-          <div className="relative text-center items-center h-[320px] lg:h-[480px] border-yellow-700 border lg:rounded-xl md:rounded-xl rounded-lg lg:p-5 p-2 w-fit grid gap-y-4">
-            <div className="relative">
-              <img
-                src={MangoG}
-                alt="close"
-                className="rounded-xl lg:w-[280px] lg:h-[350px] transition-opacity duration-300 ease-in-out object-cover"
-              />
-              <div className="absolute top-0 left-0 lg:w-[280px] h-full bg-black rounded-xl opacity-0 transition-opacity duration-300 ease-in-out hover:opacity-100 flex items-center justify-center">
-                <img src={Gmango} alt="iced" className="rounded-xl w-[280px]" />
-              </div>
-            </div>
-            <div className="grid gap-y-3">
-              <p className="font-semibold text-stone-200">
-                THC Sunset Spritz - Mango Guava
-              </p>
-              <p className="font-Oswald text-stone-200">$35.00+ </p>
-            </div>
-          </div>
-        </div>
-        <div className="flex gap-5 lg:gap-10">
-          {/* 7 */}
-          <div className="relative text-center items-center h-[320px] lg:h-[480px] border-yellow-700 border lg:rounded-xl md:rounded-xl rounded-lg lg:p-5 p-2 w-fit grid gap-y-4">
-            <div className="relative">
-              <img
-                src={Glime}
-                alt="close"
-                className="rounded-xl lg:w-[280px] lg:h-[350px] transition-opacity duration-300 ease-in-out object-cover"
-              />
-              <div className="absolute top-0 left-0 lg:w-[280px] h-full bg-black rounded-xl opacity-0 transition-opacity duration-300 ease-in-out hover:opacity-100 flex items-center justify-center">
-                <img src={Fgrape} alt="iced" className="rounded-xl w-[280px]" />
-              </div>
-            </div>
-            <div className="grid gap-y-3">
-              <p className="font-semibold text-stone-200">
-                THC Sunset Spritz - Grapefruit Lime
-              </p>
-              <p className="font-Oswald text-stone-200">$35.00+ </p>
-            </div>
-          </div>
-          {/* 8 */}
-          <div className="relative text-center items-center h-[320px] lg:h-[480px] border-yellow-700 border lg:rounded-xl md:rounded-xl rounded-lg lg:p-5 p-2 w-fit grid gap-y-4">
-            <div className="relative">
-              <img
-                src={Sunset}
-                alt="close"
-                className="rounded-xl lg:w-[280px] lg:h-[350px] transition-opacity duration-300 ease-in-out object-cover"
-              />
-              <div className="absolute top-0 left-0 lg:w-[280px] h-full bg-black rounded-xl opacity-0 transition-opacity duration-300 ease-in-out hover:opacity-100 flex items-center justify-center">
-                <img src={Cans} alt="iced" className="rounded-xl w-[280px]" />
-              </div>
-            </div>
-            <div className="grid gap-y-3">
-              <p className="font-semibold text-stone-200">
-                THC SUNSET SPRITZ - PARTY PACK
-              </p>
-              <p className="font-Oswald text-stone-200">$95.00+ </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="flex gap-10 mt-10"></div>
     </div>
   );
 };
