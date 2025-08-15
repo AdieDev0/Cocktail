@@ -27,9 +27,9 @@ const Rolling = () => {
           - ROLLING STONE
         </p>
       </div>
-      <div className="flex flex-col lg:flex-row items-center lg:px-10 px-3 bg-black">
+      <div className="flex flex-col lg:flex-row justify-center items-center lg:px-10 px-3 bg-black">
         <div className="lg:px-8 px-2 ">
-          <p className="mb-10 lg:text-3xl text-xl font-semibold text-stone-200">
+          <p className="mb-10 lg:text-3xl text-xl font-semibold text-stone-200 max-w-[750px]">
             THE FLOWERY CITRUS OF JAPANESE YUZU WITH THE SMOOTH SWEETNESS OF
             ORANGE AND A HINT OF CHILI HEAT
           </p>

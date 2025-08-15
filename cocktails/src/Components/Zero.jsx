@@ -61,36 +61,45 @@ const products = [
 ];
 
 // Reusable product card
+// Reusable product card
 const ProductCard = ({ frontImg, hoverImg, name, price }) => (
-  <div className="relative text-center h-[320px] lg:h-[480px] border-yellow-700 border rounded-xl p-2 lg:p-5 grid gap-y-4 w-fit">
-    <div className="relative">
+  <div className="relative text-center border-yellow-700 border rounded-xl p-3 sm:p-4 md:p-5 grid gap-y-4 w-full max-w-[300px]">
+    <div className="relative aspect-[3/4] w-full overflow-hidden rounded-xl">
       <img
         src={frontImg}
         alt={name}
-        className="rounded-xl lg:w-[280px] lg:h-[350px] object-cover transition-opacity duration-300 ease-in-out"
+        className="w-full h-full object-cover transition-opacity duration-300 ease-in-out"
       />
       <div className="absolute top-0 left-0 w-full h-full bg-black rounded-xl opacity-0 transition-opacity duration-300 ease-in-out hover:opacity-100 flex items-center justify-center">
-        <img src={hoverImg} alt={name} className="rounded-xl w-[280px]" />
+        <img
+          src={hoverImg}
+          alt={name}
+          className="w-full h-full object-cover rounded-xl"
+        />
       </div>
     </div>
     <div className="grid gap-y-1">
-      <p className="font-semibold text-stone-200">{name}</p>
-      <p className="font-Oswald text-stone-200">{price}</p>
+      <p className="font-semibold text-stone-200 text-sm sm:text-base md:text-lg">
+        {name}
+      </p>
+      <p className="font-Oswald text-stone-200 text-xs sm:text-sm md:text-base">
+        {price}
+      </p>
     </div>
   </div>
 );
 
 const Zero = () => {
   return (
-    <div className="w-full bg-black p-5 lg:p-20">
-      <div className="text-center mb-10 lg:mb-20">
-        <p className="lg:text-5xl text-2xl font-medium text-stone-200">
+    <div className="w-full bg-black p-4 sm:p-6 lg:p-20">
+      <div className="text-center mb-6 sm:mb-10 lg:mb-20">
+        <p className="text-2xl sm:text-3xl lg:text-5xl font-medium text-stone-200">
           ZERO-PROOF THC COCKTAILS
         </p>
       </div>
 
       {/* Responsive Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 justify-items-center">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 justify-items-center">
         {products.map((item, idx) => (
           <ProductCard key={idx} {...item} />
         ))}
